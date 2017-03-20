@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--declaring our app in the html header -->
+<html ng-app="myApp">
+	<head>
+		<title>Bilar</title>
+
+		<meta charset="utf-8">
+		<!-- meta tag for bootstrap (mobile devices) -->
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+	</head>
+	
+	<body class="Site" data-spy="scroll" data-target=".navbar" data-offset="10">
+		
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+			<script type="text/javascript">
+				
+				function get(){
+					$.get( "http://localhost:3000/customer/select/10", function( data ) {
+					 	$( ".result" ).html( data );
+					 	console.log( data );
+					});
+				};
+				
+				get();
+		 	</script>
+	</body>
+</html>
+
+
+
+

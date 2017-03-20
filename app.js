@@ -38,8 +38,9 @@ app.use(bodyParser.json());
 
 
 app.get('/',function (req,res) {
+    res.sendFile('./www/index.html', {'root': __dirname});
     console.log("welcome " + req.ip + " - " + new Date());
-    res.json("miniresto Demo App");
+    // res.json("miniresto Demo App");
 });
 
 app.get('/:model',function (req,res) {
